@@ -16,13 +16,15 @@ export class FormulaireComponent implements OnInit {
   this.form = formBuilder.group({
     nom: '',
     prenom: '',
-    pays: '',
-    email: '',
-    tel: '',
     adresse: '',
     cp: '',
     ville: '',
-    civ: ''
+    tel: '',
+    email: '',
+    civ: '',
+    password: '',
+    login: '',
+    pays: ''
   });
 }
   ngOnInit() {
