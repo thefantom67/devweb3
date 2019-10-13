@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-formulaire',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormulaireComponent implements OnInit {
 
-  constructor() { }
+  @Input() form: FormGroup;
+  @Output() formValidated: EventEmitter<FormGroup> = new EventEmitter<FormGroup>();
 
+  constructor(formBuilder: FormBuilder) {
+
+  this.form = formBuilder.group({
+    nom: '',
+    prenom: '',
+    pays: '',
+    email: '',
+    tel: '',
+    adresse: '',
+    cp: '',
+    ville: '',
+    civ: ''
+  });
+}
   ngOnInit() {
   }
-
+  onSubmit(){
+    this.formValidated.emit(this.form);
+  }
 }
+
+

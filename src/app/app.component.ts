@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'devweb2';
+
+  formValidated: boolean = false;
+  data: FormGroup;
+
+  onFormValidated(data: FormGroup){
+    this.data = data;
+    this.formValidated = true;
+}
 }
