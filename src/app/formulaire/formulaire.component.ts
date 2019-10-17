@@ -10,9 +10,9 @@ export class FormulaireComponent implements OnInit {
 
   @Input() form: FormGroup;
   @Output() formValidated: EventEmitter<FormGroup> = new EventEmitter<FormGroup>();
-
+  tel;
   constructor(formBuilder: FormBuilder) {
-
+  
   this.form = formBuilder.group({
     nom: '',
     prenom: '',
@@ -24,14 +24,21 @@ export class FormulaireComponent implements OnInit {
     civ: '',
     password: '',
     login: '',
-    pays: ''
+    pays: '',
+
+    
   });
+}
+
+getValidationTel () : boolean {
+  return (/^[0-9]{1,10}$/.test (this.tel));    
 }
   ngOnInit() {
   }
   onSubmit(){
     this.formValidated.emit(this.form);
   }
+  
 }
 
 

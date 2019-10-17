@@ -25,7 +25,8 @@
        
             <br />
             <label for="tel">Téléphone :</label><br required/>
-            <input formControlName="tel" type="text" name="tel" id="tel"/>
+            <input formControlName="tel" id="tel" [appError]="getValidationTel ()" [(ngModel)]="tel">
+
        
             <br />
             <label for="email">Email :</label><br required/>
