@@ -8,8 +8,10 @@ import { TetiereComponent } from './tetiere/tetiere.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import { RecapComponent } from './recap/recap.component';
-import { PhoneNumberPipe } from './phone-number.pipe';
-import { ErrorDirective } from './error.directive';
+import { PhoneNumberPipe } from './pipes/phone-number.pipe';
+import { ErrorDirective } from './directives/error.directive';
+import { ProduitsComponent } from './produits/produits.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ErrorDirective } from './error.directive';
     FormulaireComponent,
     RecapComponent,
     PhoneNumberPipe,
-    ErrorDirective
+    ErrorDirective,
+    ProduitsComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
