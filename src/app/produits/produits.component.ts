@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { SwipeService } from '../services/swipe.service';
+import { Hotel } from '../models/hotel';
 
 @Component({
   selector: 'app-produits',
@@ -7,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProduitsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private SwipeService : SwipeService) { }
+  Hotels : Observable<Hotel[]>
   ngOnInit() {
+    this.Hotels = this.SwipeService.getHotels ();
   }
 
 }

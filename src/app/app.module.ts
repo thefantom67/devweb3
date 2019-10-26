@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { PhoneNumberPipe } from './pipes/phone-number.pipe';
 import { ErrorDirective } from './directives/error.directive';
 import { ProduitsComponent } from './produits/produits.component';
 import { FilterComponent } from './filter/filter.component';
+import { SwipeService } from './services/swipe.service';
 
 @NgModule({
   declarations: [
@@ -29,9 +31,10 @@ import { FilterComponent } from './filter/filter.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SwipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
