@@ -15,5 +15,6 @@ export class ProduitsComponent implements OnInit {
   ngOnInit() {
     this.Hotels = this.SwipeService.getHotels ();
   }
+  
 
 }
