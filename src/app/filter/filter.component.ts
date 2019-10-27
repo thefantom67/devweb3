@@ -17,7 +17,8 @@ export class FilterComponent implements OnInit {
 
   sendFilterByName(){
     this.filter.emit(this.filterName);
-    console.log(this.filterName);
   }
+
+  //Je sais pas faire un filtre, mais je sais faire des Carbo :D
 
 }
