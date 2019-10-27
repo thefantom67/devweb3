@@ -1,13 +1,10 @@
-# Devweb2
+# Devweb3
 
-Travail effectué: 65-70%
+Travail effectué: 90%
 Temps de réalisation: +10h
 
-Difficultés:
-- Récupération des données 
-- Affichage de la page de récapitulatif
-- Validation des données
-- Problème d'affichage dû à Materialize
+Difficulté:
+- LE FILTRE !!
 
 ## Development server
 
